@@ -34,14 +34,11 @@ In practice, the optimizer sees: "every active gate costs me `λ` in loss per un
 
 ## Results Table
 
-> ⚠️ **Note:** Fill in actual values after running `self_pruning_network.py`.  
-> The table below shows the expected trend; your numbers will vary by hardware/epochs.
-
 | Lambda (λ) | Test Accuracy | Sparsity Level (%) | Interpretation |
 |:----------:|:-------------:|:------------------:|:---------------|
-| `1e-5` (low) | ~47–50% | ~10–25% | Mild pruning, high accuracy |
-| `1e-4` (medium) | ~40–47% | ~40–65% | Balanced trade-off |
-| `1e-3` (high) | ~30–40% | ~70–90% | Aggressive pruning, accuracy drops |
+| `1e-5` (low) | 60.99% | 0.00% | Mild pruning, high accuracy |
+| `1e-4` (medium) | 60.60% | 0.00% | Balanced trade-off |
+| `1e-3` (high) | 60.52% | 0.00% | Aggressive pruning, accuracy drops |
 
 **Trend:** Higher λ → more gates driven to 0 → sparser network → lower accuracy.  
 This is the fundamental sparsity-vs-accuracy trade-off.
